@@ -3,11 +3,11 @@
 
 ## What it does
 
-Can compile single integer
+Can compile space-free non-negative addition/subtraction
 ```
-$ ./9cc 123 > assembled.s
+$ ./9cc "3+2-1" > assembled.s
 $ cc -o executable assembled.s
 $ ./executable
 $ echo $?                  # show the last result
-123
+5
 ```
