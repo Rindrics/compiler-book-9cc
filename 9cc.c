@@ -103,7 +103,10 @@ int main(int argc, char **argv) {
   printf(".intel_syntax noprefix\n");
   printf(".globl main\n");
   printf("main:\n");
-  printf("  mov rax, %ld\n", strtol(p, &p, 10));
+
+  // The first 'mov' instruction
+  //   with assertion for number
+  printf("  mov rax, %d\n", expect_number());
 
   while(*p) {
     if (*p == '+') {
