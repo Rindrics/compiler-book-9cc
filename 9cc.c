@@ -108,7 +108,7 @@ int main(int argc, char **argv) {
   //   with assertion for number
   printf("  mov rax, %d\n", expect_number());
 
-  while(*p) {
+  while(!at_eof()) {
     if (*p == '+') {
       p++;
       printf("  add rax, %ld\n", strtol(p, &p, 10));
