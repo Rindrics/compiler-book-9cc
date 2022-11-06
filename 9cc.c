@@ -93,7 +93,7 @@ Token *tokenize(char *p) {
 
 int main(int argc, char **argv) {
   if (argc != 2) {
-    fprintf(stderr, "unexpected number of arguments");
+    error("unexpected number of arguments");
     return 1;
   }
 
