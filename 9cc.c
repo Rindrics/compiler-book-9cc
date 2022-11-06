@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef enum {
+  TK_RESERVED,
+  TK_NUM,
+  TK_EOF,
+} TokenKind;
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     fprintf(stderr, "unexpected number of arguments");
