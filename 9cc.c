@@ -49,6 +49,10 @@ int expect_number() {
   return val;
 }
 
+bool at_eof() {
+  return token->kind == TK_EOF;
+}
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     fprintf(stderr, "unexpected number of arguments");
