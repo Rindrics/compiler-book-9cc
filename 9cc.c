@@ -35,6 +35,12 @@ bool consume(char op) {
   return true;
 }
 
+void expect(char op) {
+  if (token->kind != TK_RESERVED || token->str[0] !=op)
+    error("not '%c'", op);
+  token = token->next;
+}
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     fprintf(stderr, "unexpected number of arguments");
