@@ -1,7 +1,7 @@
 # compiler-book-9cc
-『低レイヤを知りたい人のためのCコンパイラ作成入門』のハンズオンメモ
 
 ## What it does
+Personal learning log of reading "[compiler book](https://www.sigbus.info/compilerbook)" by [`@rui314`](https://twitter.com/rui314)
 
 Can compile non-negative addition/subtraction with spaces
 ```
