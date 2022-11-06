@@ -41,6 +41,14 @@ void expect(char op) {
   token = token->next;
 }
 
+int expect_number() {
+  if (token->kind != TK_NUM)
+    error("not number");
+  int val = token->val;
+  token = token->next;
+  return val;
+}
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     fprintf(stderr, "unexpected number of arguments");
