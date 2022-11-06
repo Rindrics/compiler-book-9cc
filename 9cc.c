@@ -7,12 +7,16 @@ typedef enum {
   TK_EOF,
 } TokenKind;
 
+typedef struct Token Token;
+
 struct Token {
   TokenKind kind;
   Token *next;
   int val;
   char *str;
 };
+
+Token *token;
 
 int main(int argc, char **argv) {
   if (argc != 2) {
