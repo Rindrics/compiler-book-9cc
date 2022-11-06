@@ -7,6 +7,13 @@ typedef enum {
   TK_EOF,
 } TokenKind;
 
+struct Token {
+  TokenKind kind;
+  Token *next;
+  int val;
+  char *str;
+};
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     fprintf(stderr, "unexpected number of arguments");
