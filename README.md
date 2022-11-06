@@ -9,5 +9,5 @@ $ ./9cc "3+2-1" > assembled.s
 $ cc -o executable assembled.s
 $ ./executable
 $ echo $?                  # show the last result
-5
+4
 ```
