@@ -1,7 +1,8 @@
 # compiler-book-9cc
 
-## What it does
 Personal learning log of reading "[compiler book](https://www.sigbus.info/compilerbook)" by [`@rui314`](https://twitter.com/rui314)
+
+## What current `9cc` program does
 
 Can compile non-negative addition/subtraction with spaces
 ```
