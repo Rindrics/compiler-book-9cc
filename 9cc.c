@@ -114,14 +114,8 @@ int main(int argc, char **argv) {
       continue;
     }
 
-    if (*p == '-') {
-      p++;
-      printf("  sub rax, %ld\n", strtol(p, &p, 10));
-      continue;
-    }
-
-    fprintf(stderr, "Unexpected character: '%c'\n", *p);
-    return 1;
+    expect('-');
+    printf("  sub rax, %d\n", expect_number());
   }
 
   printf("  ret\n");
