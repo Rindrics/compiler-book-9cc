@@ -77,7 +77,8 @@ Token *new_token(TokenKind kind, Token *cur, char *str) {
   return tok;
 }
 
-Token *tokenize(char *p) {
+Token *tokenize() {
+  char *p = user_input;
   Token head;
   head.next = NULL;
   Token *cur = &head;
@@ -112,7 +113,8 @@ int main(int argc, char **argv) {
     return 1;
   }
 
-  token = tokenize(argv[1]);
+  user_input = argv[1];
+  token = tokenize();
 
   printf(".intel_syntax noprefix\n");
   printf(".globl main\n");
