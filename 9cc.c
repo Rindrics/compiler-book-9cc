@@ -152,6 +152,19 @@ Node *expr() {
   }
 }
 
+Node *mul() {
+  Node *node = primary();
+
+  for (;;) {
+    if (consume('*'))
+      node = new_node(ND_MUL, node, primary());
+    else if (consume('/'))
+      node = new_node(ND_DIV, node, primary());
+    else
+      return node;
+  }
+}
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     error("unexpected number of arguments");
