@@ -132,6 +132,13 @@ Node *new_node(NodeKind kind, Node *lhs, Node *rhs) {
   return node;
 }
 
+Node *new_node_num(int val) {
+  Node *node = calloc(1, sizeof(Node));
+  node->kind = ND_NUM;
+  node->val = val;
+  return node;
+}
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     error("unexpected number of arguments");
