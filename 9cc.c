@@ -165,6 +165,16 @@ Node *mul() {
   }
 }
 
+Node *primary() {
+  if (consume('(')) {
+    Node *node = expr();
+    expect(')');
+    return node;
+  }
+
+  return new_node_num(expect_number());
+}
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     error("unexpected number of arguments");
