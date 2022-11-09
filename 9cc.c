@@ -107,6 +107,14 @@ Token *tokenize() {
   return head.next;
 }
 
+typedef enum {
+  ND_ADD,
+  ND_SUB,
+  ND_MUL,
+  ND_DIV,
+  ND_NUM,
+} NodeKind;
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     error("unexpected number of arguments");
