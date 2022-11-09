@@ -115,6 +115,15 @@ typedef enum {
   ND_NUM,
 } NodeKind;
 
+typedef struct Node Node;
+
+struct Node {
+  NodeKind kind;
+  Node *lhs;
+  Node *rhs;
+  int val;
+};
+
 int main(int argc, char **argv) {
   if (argc != 2) {
     error("unexpected number of arguments");
