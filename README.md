@@ -4,11 +4,11 @@ Personal learning log of reading "[compiler book](https://www.sigbus.info/compil
 
 ## What current `9cc` program does
 
-Can compile non-negative addition/subtraction with spaces
+Can compile non-negative calculation with *, /, and ()
 ```
-$ ./9cc "3 + 2 - 1" > assembled.s
+$ ./9cc "(2 + 2 * 3) / 4" > assembled.s
 $ cc -o executable assembled.s
 $ ./executable
 $ echo $?                  # show the last result
-4
+2
 ```
