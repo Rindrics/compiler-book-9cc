@@ -124,6 +124,9 @@ struct Node {
   int val;
 };
 
+Node *mul();
+Node *primary();
+
 Node *new_node(NodeKind kind, Node *lhs, Node *rhs) {
   Node *node = calloc(1, sizeof(Node));
   node->kind = kind;
