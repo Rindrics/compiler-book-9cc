@@ -4,11 +4,11 @@ Personal learning log of reading "[compiler book](https://www.sigbus.info/compil
 
 ## What current `9cc` program does
 
-Can compile non-negative calculation with *, /, and ()
+Can compile calculation with unary signs ('+', '-')
 ```
-$ ./9cc "(2 + 2 * 3) / 4" > assembled.s
+$ ./9cc "(+2 + 5) * 4" > assembled.s
 $ cc -o executable assembled.s
 $ ./executable
 $ echo $?                  # show the last result
-2
+28
 ```
